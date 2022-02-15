@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTf-8">
+        <title>캔버스</title>
+    </head>
+    <body>
+        <h1>canvas 확인하기</h1>
+        <canvas id="myCanvas" width="300" height="200" 
+        style="border: 1px solid black;">
+
+        </canvas>
+        <h1>canvas_2 확인하기</h1>
+        <canvas id="myCanvas_2" width="300" height="200"
+        style="border: 1px solid black;">
+        </canvas>
+        <figure>
+            <img id="naver" src="../img/naver.png" alt="네이버" width="200" height="180">
+        </figure>
+        <canvas id="drawCanvas" widht="200px" height="190px" style="border: 1px solid black;">
+        </canvas>
+        <p><button onclick="drawImage()">이미지 그리기</button></p>
+        <script>
+            let paper = document.getElementById("myCanvas");
+            let context = paper.getContext("2d");
+            context.fillStyle="#ffff00";
+            context.fillRect(0,0,150,75);
+            //원을 그리기 전에 path를 초기화한다
+            context.beginPath();
+            context.arc(200,150,30,30,30 *Math.PI);
+            context.strokeStyle="#ff00ff";
+            context.fill();
+            context.stroke();
+            //패스를 지정한 후에 원을 그린다.
+            context,moveTo(0, 0);
+            context.lineTo(60, 60);
+            context.stroke();
+
+            context.font = "30px Ariel";
+            context.fillStyle="#00ffff";
+            context.fillText("CANVAS", 10,50);
+
+            //그라디언트 종류 = 선형,원형
+            let grd = context.createRadialGradient(75, 200, 50, 60, 200, 30);
+            //Radial = 원형그라디언트(시작원의 x,y,중심점,반지름,끝나는 원의x,y중심점,반지름)
+            grd.addColorStop(0, "black");
+            grd.addColorStop(1, "white");
+            let gradient = context.createLinearGradient(0,200,150,200);
+            //Linear = 선형그라디언트(시작x,y,끝x,y)
+            gradient.addColorStop(0, "black");
+            gradient.addColorStop(1, "white");
+            context.fillStyle = gradient;
+            context.fillRect(0,150,150,50);
+
+            context.strokeStyle = gradient;
+            context.rect(0,120,150,20);
+            context.stroke();
+            console.log(paper);
+        </script>
+        <script>
+            let paper_2 = document.getElementById("myCanvas_2");
+            let ctx = paper_2.getContext("2d");
+
+            let grd_2 = ctx.createLinearGradient(0,150,200,150);
+            grd_2.addColorStop(0, "blue");
+            grd_2.addColorStop(1, "white");
+            ctx.fillStyle = grd_2;
+            ctx.fillRect(5,5,200,100);
+            ctx.font = "30px Ariel";
+            ctx.fillStyle="#ffffff";
+            ctx.fillText("CANVAS", 20,65);
+        </script>
+        <script>
+            let img = document.getElementById("drawCanvas");
+            let contents = img.getContext("2d");
+            let imgscr = document.getElementById("naver");
+            contents.drawImage(imgscr,10,10);
+        </script>
+    </body>
+</html>

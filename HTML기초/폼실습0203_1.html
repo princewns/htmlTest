@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>폼실습0203</title>
+    </head>
+        <body>
+            <h1>로그인 페이지 입니다.</h1>
+            <form><!--데이터값을 다른 웹페이지로 보내기위해 사용, 입력폼을 테이블로 정렬해서 보이기 위함-->
+                <table style="border: 2px solid black;">
+                    <tr><!--tr을 사용하여 행을 추가한다.-->
+                        <td>사용자 : </td>
+                        <td><input type="name" name="name"></td>
+                        <td rowspan="2"><input type="submit" value="전송"></td><!--행을 합치기 위해서는 위에서 작성한다.-->
+                    </tr>
+                    <tr>
+                        <td>비밀번호 : </td>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                </table>
+                <a href>비밀번호를 잊어버렸나요?</a>
+            </form>
+            <h1>설문조사</h1><br>
+            <form>
+                성별을 체크해주세요<br><br>
+                <input type="radio" name="sex" value="male">남
+                <input type="radio" name="sex" value="female">여<br><br>
+                음식을 선택해주세요<br><br>
+                <input type="checkbox" value="한식" name="음식">한식<br>
+                <input type="checkbox" value="양식" name="음식">양식<br>
+                <input type="checkbox" value="중식" name="음식">중식<br>
+                <input type="checkbox" value="일식" name="음식">일식<br><br>
+                기타의견을 남겨주세요<br><br>
+                <textarea name="massage" rows="5" cols="30">
+                </textarea>
+            </form>    
+        </body>
+</html>

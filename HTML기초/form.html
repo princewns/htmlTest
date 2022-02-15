@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head charset="UTF-8">
+        <title>FORM활용</title>
+    </head>
+        <body>
+            <h1>FORM 테그 활용</h1>
+            <form>
+                글자를 작성하세요.<br>
+                <input type="text"><br>
+                password타입 입니다.<br>
+                <input type="password"><br>
+                라디오 버튼입니다.<br>
+                <input type="radio" value="1" name="1">1<br>
+                <input type="radio" value="2" name="1">2<br>
+                <input type="radio" value="3" name="1">3<br>
+                영화를 선택해주세요<br>
+                <input type="checkbox" name="movie" value="영화1">영화1
+                <input type="checkbox" name="movie" value="영화2">영화2
+                <input type="checkbox" name="movie" value="영화3">영화3<br>
+                <input type="file" name="file" accept="image/*"><br>
+                선택하세요<br>
+                <select name="과일">
+                    <option value="사과">사과</option>
+                    <option value="귤">귤</option>
+                    <option value="복숭아">복숭아</option>
+                </form>
+                <textarea name="message" rows="5" cols="30">
+                </textarea><br>
+                <fieldset>
+                    <legend>입력양식</legend>
+                    이름 : <br>
+                    <input type="text" name="username"><br>
+                    이메일 : <br>
+                    <input type="text" name="email"><br><br>
+                    <input type="submit" value="전송">
+                </fieldset>
+        </body>
+</html>
