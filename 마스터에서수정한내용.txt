@@ -1,0 +1,11 @@
+초기화 git init
+인덱스 추가 git add
+커밋 git commit -m '기록할 내용'
+내용확인 git log
+인덱스 영역 저장 git remote add origin '주소'
+원격 저장소에 저장 git push -u origin master(브랜치 이름)
+
+브랜치 생성 git branch (브랜치 이름)
+브랜치 변경 git checkout (브랜치 이름)
+브랜치 확인 git branch
+브랜치 합치기 git merge (합칠 브랜치 이름)
