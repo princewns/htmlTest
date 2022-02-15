@@ -9,3 +9,9 @@
 브랜치 변경 git checkout (브랜치 이름)
 브랜치 확인 git branch
 브랜치 합치기 git merge (합칠 브랜치 이름)
+
+merge충돌시
+1.충돌된 파일 확인
+2.원하는 코드만 남겨둠
+3.git add
+4.git commit -m '충돌수정코맨트'
